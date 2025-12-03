@@ -1,16 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Azure Static Website</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Simple, fast, and cost-effective hosting for static sites using Azure Storage static website hosting." />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="/">Azure Static Website</a>
-      <nav class="nav">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Azure Static Website home">Azure Static Website</a>
+      <nav class="site-nav" role="navigation" aria-label="Primary">
         <a href="#features">Features</a>
         <a href="#docs">Docs</a>
         <a href="#contact">Contact</a>
@@ -18,47 +21,62 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" class="site-main" role="main">
     <section class="hero">
       <div class="container">
-        <h1>Deploy a static website to Azure Storage</h1>
-        <p class="lead">Simple, fast, and cost-effective hosting for static sites using Azure Storage static website feature.</p>
-        <p class="cta"><a class="btn" href="#docs">Get started</a></p>
+        <h1>Host static sites on Azure Storage</h1>
+        <p class="lead">Simple, reliable, and cost-effective static hosting using Azure Storage's static website feature. Perfect for docs, blogs, and landing pages.</p>
+        <p class="hero-cta">
+          <a class="btn primary" href="#docs">Get started</a>
+          <a class="btn" href="https://github.com/daedana/AzureStaticWebsite" target="_blank" rel="noopener">View on GitHub</a>
+        </p>
       </div>
     </section>
 
-    <section id="features" class="features container">
-      <article>
-        <h2>Fast & Scalable</h2>
-        <p>Serve static files directly from Azure's global network with low latency and automatic scaling.</p>
-      </article>
-      <article>
-        <h2>Secure</h2>
-        <p>Enable HTTPS and configure custom domains to serve content securely.</p>
-      </article>
-      <article>
-        <h2>Cost Effective</h2>
-        <p>Only pay for storage and bandwidth — ideal for documentation, blogs, and landing pages.</p>
-      </article>
+    <section id="features" class="features container" aria-labelledby="features-heading">
+      <h2 id="features-heading" class="section-title">Key features</h2>
+      <div class="features-grid">
+        <article class="feature">
+          <h3>Fast & Scalable</h3>
+          <p>Serve static files directly from Azure's global network with low latency and built-in scale.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Secure</h3>
+          <p>Serve over HTTPS and bind custom domains for secure delivery.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Cost Effective</h3>
+          <p>Only pay for storage and bandwidth — ideal for lightweight public sites and documentation.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="docs" class="container docs">
-      <h2>Documentation</h2>
-      <p>See the repository README for instructions on how to configure Azure Storage, enable static website hosting, and upload your files.</p>
-      <pre class="code">git clone https://github.com/daedana/AzureStaticWebsite.git
+    <section id="docs" class="docs container" aria-labelledby="docs-heading">
+      <h2 id="docs-heading" class="section-title">Documentation</h2>
+      <p>Follow the repository README to configure Azure Storage, enable static website hosting, and upload your site files.</p>
+
+      <pre class="code-snippet" aria-hidden="false"><code>git clone https://github.com/daedana/AzureStaticWebsite.git
 cd AzureStaticWebsite
-# follow README instructions</pre>
+# follow README instructions to configure storage and upload files</code></pre>
     </section>
 
-    <section id="contact" class="container contact">
-      <h2>Contact</h2>
-      <p>Questions or contributions? Open an issue or a pull request on GitHub: <a href="https://github.com/daedana/AzureStaticWebsite">daedana/AzureStaticWebsite</a></p>
+    <section id="contact" class="contact container" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="section-title">Contact & Contributing</h2>
+      <p>If you have questions or want to contribute, open an issue or a pull request on the project repository:</p>
+      <p><a href="https://github.com/daedana/AzureStaticWebsite" target="_blank" rel="noopener">github.com/daedana/AzureStaticWebsite</a></p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
       <small>&copy; 2025 daedana. All rights reserved.</small>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#docs">Docs</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </footer>
 </body>
